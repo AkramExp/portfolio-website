@@ -7,7 +7,7 @@ def sendMail(message):
     port = 465
 
     username = "its.akram246@gmail.com"
-    password = "uwtngsmbmoldgoon"
+    password = ""
 
     receiver = "its.akram246@gmail.com"
 
