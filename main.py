@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas
 
 st.set_page_config(layout='wide')
 
@@ -15,3 +16,15 @@ I have experience working with various tools and technologies such as Git, Jenki
 As I continue to learn and grow in the DevOps space, I am committed to staying up-to-date with emerging trends and best practices. I am excited about the prospect of contributing to a team that is passionate about creating a culture of continuous improvement and delivering value to customers.
     """
     st.info(content)
+
+df = pandas.read_csv("data.csv", sep=";")
+
+col3, col4 = st.columns(2)
+
+with col3:
+    for index, row in df[:10].iterrows():
+        st.header(row["title"])
+
+with col4:
+    for index, row in df[10:].iterrows():
+        st.header(row["title"])
